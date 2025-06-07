@@ -1,47 +1,62 @@
 :root {
   --primary: #f57c00;
-  --background: #121212;
-  --light: #ffffff;
-  --gray: #e0e0e0;
+  --dark: #1c1c1c;
+  --darker: #121212;
+  --light: #f5f5f5;
+  --mid-gray: #bdbdbd;
+  --gray-bg: #2a2a2a;
+}
+
+* {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background: var(--background);
+  background: var(--darker);
   color: var(--light);
 }
 
 header {
-  background-color: var(--background);
+  background-color: var(--dark);
+  padding: 60px 20px 40px;
   text-align: center;
-  padding: 40px 20px;
-  border-bottom: 2px solid var(--primary);
+  border-bottom: 3px solid var(--primary);
+  position: relative;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.5em;
+  font-size: 3em;
   color: var(--primary);
 }
 
 header p {
-  margin-top: 10px;
-  font-size: 1.2em;
-  color: var(--gray);
+  margin-top: 15px;
+  font-size: 1.3em;
+  color: var(--mid-gray);
 }
 
 nav {
-  margin-top: 20px;
+  margin-top: 30px;
+  position: sticky;
+  top: 0;
+  background-color: var(--gray-bg);
+  padding: 10px 0;
+  z-index: 1000;
+  border-bottom: 1px solid #333;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 nav a {
-  margin: 0 15px;
+  margin: 0 20px;
   color: var(--light);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   transition: color 0.3s;
+  font-size: 1em;
 }
 
 nav a:hover {
@@ -49,15 +64,36 @@ nav a:hover {
 }
 
 section {
-  padding: 50px 20px;
+  padding: 100px 20px 60px;
   max-width: 1000px;
   margin: auto;
 }
 
+#about {
+  background-color: var(--gray-bg);
+  border-radius: 10px;
+  padding: 40px;
+  margin-top: 30px;
+  color: var(--light);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+#about h2 {
+  font-size: 1.6em;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: var(--mid-gray);
+}
+
 h2 {
   color: var(--primary);
-  border-bottom: 1px solid var(--gray);
-  padding-bottom: 5px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
   margin-bottom: 30px;
   font-size: 1.8em;
 }
@@ -69,7 +105,7 @@ h2 {
 }
 
 .card {
-  background: #1e1e1e;
+  background: var(--dark);
   padding: 20px;
   border-radius: 10px;
   width: calc(50% - 20px);
@@ -94,7 +130,7 @@ h2 {
 }
 
 .card p {
-  color: var(--gray);
+  color: var(--mid-gray);
 }
 
 .card a {
@@ -125,6 +161,6 @@ footer {
   text-align: center;
   padding: 30px 10px;
   background-color: #0f0f0f;
-  color: var(--gray);
+  color: var(--mid-gray);
   margin-top: 50px;
 }
