@@ -1,7 +1,7 @@
 :root {
-  --primary: #A98331;
-  --secondary: #AD9E8B;
-  --accent: #F4BB23;
+  --primary: #32595E;
+  --secondary: #DDD7C5;
+  --accent: #F8F1DC;
   --dark: #373841;
   --light: #FDF1DD;
 }
@@ -25,7 +25,7 @@ nav {
 }
 
 .card:hover {
-  box-shadow: 0 0 20px rgba(169, 131, 49, 0.4);
+  box-shadow: 0 0 20px rgba(50, 89, 94, 0.4);
 }
 
 .card a {
