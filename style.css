@@ -1,6 +1,6 @@
 :root {
   --primary: #32595E;
-  --secondary: #5E7C8A; /* Un tono más oscuro para los recuadros */
+  --secondary: #5E7C8A;
   --accent: #F8F1DC;
   --light-accent: #FDF1DD;
   --dark: #373841;
@@ -59,7 +59,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--light-accent); /* Cambié el color de hover para que sea más coherente */
+  color: var(--light-accent);
 }
 
 section {
@@ -86,7 +86,7 @@ section {
 
 #about p {
   font-size: 1.1rem;
-  color: var(--light); /* Asegurando que el texto sea legible */
+  color: var(--light);
 }
 
 .grid {
@@ -103,17 +103,19 @@ section {
   flex: 1 1 calc(50% - 2rem);
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: box-shadow 0.3s, border 0.3s;
+  border: 2px solid transparent;
 }
 
 .card:hover {
-  background-color: var(--light-accent);
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border: 2px solid var(--light-accent);
+  box-shadow: 0 0 20px rgba(248, 241, 220, 0.6);
 }
 
 .card img {
   width: 100%;
+  height: 200px; /* Altura fija para las imágenes */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
   border-radius: 8px;
   margin-bottom: 1rem;
 }
