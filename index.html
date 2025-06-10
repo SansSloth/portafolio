@@ -1,89 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jair Jaime Hernández González - Portafolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+  <section id="portada" tabindex="-1" aria-label="Portada">
     <h1>Jair Jaime Hernández González</h1>
     <p>Estudiante de Actuaría • Python • R • Power BI</p>
-    <nav>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#cartas">Cartas</a>
-      <a href="#certificados">Certificados</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
-
-  <section id="about">
-    <h2>Sobre mí</h2>
-    <p>
-      Apasionado por las matemáticas, la probabilidad y el análisis de datos. Como estudiante de Actuaría, tengo
-      habilidades para desarrollar soluciones analíticas en diversos contextos, especialmente en el procesamiento,
-      interpretación y visualización de información. Me destaco por mi pensamiento lógico, la resolución eficiente
-      de problemas y una actitud proactiva hacia el aprendizaje continuo. Disfruto transformar datos complejos
-      en ideas claras y aplicables para la toma de decisiones.
-    </p>
   </section>
 
-  <section id="proyectos">
-    <h2>📊 Proyectos y Dashboards</h2>
-    <div class="grid">
-      <div class="card">
-        <a href="assets/Analisis estadistico e inferencial COVID VERACRUZ.pdf" target="_blank">
-          <img src="assets/gifgraficas.gif" alt="Análisis COVID-19" style="border-radius: 8px;">
-        </a>
-        <h3>Análisis estadístico e inferencial de COVID-19</h3>
-        <p>
-          Exploración de datos de salud en Veracruz (2023), enfocada en la relación entre COVID-19 y
-          tres factores de riesgo: obesidad, diabetes y tabaquismo. Los datos, obtenidos de
-          Datos Abiertos de la Dirección General de Epidemiología, fueron limpiados y procesados con
-          R antes de realizar análisis estadísticos descriptivos e inferenciales para identificar patrones relevantes.
-        </p>
-      </div>
-      <div class="card">
-        <a href="assets/PrediccionPokemon.pdf" target="_blank">
-          <img src="assets/pokemongif.gif" alt="Muestras de Matchups" style="border-radius: 8px;">
-        </a>
-        <h3>Predicción de Combate Pokémon con Machine Learning</h3>
-        <p>
-          Este proyecto utiliza técnicas de Machine Learning para predecir el ganador de un
-          combate entre dos Pokémon, combinando datos estadísticos y combates históricos con
-          una interfaz web interactiva desarrollada con Flask.
-        </p>
-      </div>
-    </div>
-  </section>
+  <nav class="vertical-nav">
+    <a href="#about" aria-label="Ir a Sobre mí" class="circle-button">
+      <img src="assets/icono1.png" alt="Sobre mí" class="nav-icon">
+    </a>
+    <a href="#proyectos" aria-label="Ir a Proyectos" class="circle-button">
+      <img src="assets/icono2.png" alt="Proyectos" class="nav-icon">
+    </a>
+    <a href="#cartas" aria-label="Ir a Cartas" class="circle-button">
+      <img src="assets/icono3.png" alt="Cartas" class="nav-icon">
+    </a>
+    <!--
+    <a href="#certificados" aria-label="Ir a Certificados" class="circle-button">
+      <img src="assets/icono4.png" alt="Certificados" class="nav-icon">
+    </a>
+    -->
+    <a href="#contacto" aria-label="Ir a Contacto" class="circle-button">
+      <img src="assets/icono5.png" alt="Contacto" class="nav-icon">
+    </a>
+  </nav>
 
-  <section id="cartas">
-    <h2>📄 Cartas de Recomendación</h2>
+  <main class="intro-container">
+    <section id="about" class="about-section" tabindex="-1">
+      <h2>Sobre mí</h2>
+      <p>
+        Apasionado por las matemáticas, la probabilidad y el análisis de datos. Como estudiante de Actuaría, tengo
+        habilidades para desarrollar soluciones analíticas en diversos contextos, especialmente en el procesamiento,
+        interpretación y visualización de información. Me destaco por mi pensamiento lógico, la resolución eficiente
+        de problemas y una actitud proactiva hacia el aprendizaje continuo. Disfruto transformar datos complejos
+        en ideas claras y aplicables para la toma de decisiones.
+      </p>
+    </section>
+
+    <section id="proyectos" class="proyectos-section" tabindex="-1">
+      <h2>Proyectos</h2>
+      <div class="proyectos-grid">
+        <div class="proyecto-card">
+          <h3>Análisis COVID-19</h3>
+          <a href="assets/Analisis estadistico e inferencial COVID VERACRUZ.pdf" target="_blank" rel="noopener noreferrer">
+            <img src="assets/gifgraficas.gif" alt="Análisis COVID-19" />
+          </a>
+          <div class="descripcion">
+            Exploración de datos de salud en Veracruz (2023), centrada en la relación entre 
+            COVID-19 y tres factores de riesgo: obesidad, diabetes y tabaquismo. Limpieza y
+            análisis estadístico con R para detectar patrones relevantes.
+          </div>
+        </div>
+
+        <div class="proyecto-card">
+          <h3>Predicción Pokémon</h3>
+          <a href="Predicción de Combate Pokémon.pdf" target="_blank" rel="noopener noreferrer">
+            <img src="assets/pokemongif.gif" alt="Predicción Pokémon" />
+          </a>
+          <div class="descripcion">
+            Este proyecto utiliza técnicas de Machine Learning para predecir el ganador de un
+            combate entre dos Pokémon, combinando datos estadísticos y combates históricos con
+            una interfaz web interactiva desarrollada con Flask.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section id="cartas" tabindex="-1">
+    <h2>Cartas de Recomendación</h2>
     <ul>
-      <li><a href="assets/CartaRecomendacion.pdf" target="_blank">Carta de Facultad de Ciencias Físico Matemáticas</a></li>
+      <li><a href="assets/CartaRecomendacion.pdf" target="_blank" rel="noopener noreferrer">Carta de Facultad de Ciencias Físico Matemáticas</a></li>
     </ul>
   </section>
 <!--
-  <section id="certificados">
-    <h2>🎓 Certificados y Cursos</h2>
+  <section id="certificados" tabindex="-1">
+    <h2>Certificados y Cursos</h2>
     <div class="grid">
       <div class="card">
-        <img src="assets/certificado1.jpg" alt="Certificado 1">
+        <img src="assets/certificado1.jpg" alt="Certificado 1" />
         <p>Curso: Fundamentos de SQL – Platzi</p>
       </div>
       <div class="card">
-        <img src="assets/certificado2.jpg" alt="Certificado 2">
+        <img src="assets/certificado2.jpg" alt="Certificado 2" />
         <p>Curso: Introducción a Python – freeCodeCamp</p>
       </div>
     </div>
   </section>
 -->
-  <section id="contacto">
-    <h2>📬 Contacto</h2>
+  <section id="contacto" tabindex="-1">
+    <h2>Contacto</h2>
     <p>📧 <a href="mailto:jairhdz01@hotmail.com">jairhdz01@hotmail.com</a></p>
-    <p>💼 <a href="https://www.linkedin.com/in/hernandezgonzalezjair/" target="_blank">LinkedIn</a></p>
+    <p>💼 <a href="https://www.linkedin.com/in/hernandezgonzalezjair/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
   </section>
 
   <footer>
