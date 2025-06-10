@@ -102,13 +102,14 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: space-between; /* opcional, da mejor espaciado */
 }
 
 .card {
   background: var(--dark);
   padding: 20px;
   border-radius: 10px;
-  width: calc(50% - 20px);
+  flex: 1 1 calc(50% - 10px);
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -163,4 +164,9 @@ footer {
   background-color: #0f0f0f;
   color: var(--mid-gray);
   margin-top: 50px;
+}
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%;
+  }
 }
